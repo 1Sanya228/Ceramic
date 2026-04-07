@@ -1,0 +1,41 @@
+@use "/src/sass/libs/modern-normalize.css";
+@use "/src/sass/libs/fontello.css";
+
+@use "/src/sass/base/variables.scss" as v;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+figure,
+p,
+ol,
+ul {
+	margin: 0;
+}
+
+ol[role="list"],
+ul[role="list"] {
+	list-style: none;
+	padding-inline: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+	font-size: inherit;
+	font-weight: inherit;
+}
+
+
+html {
+	font-family: "Barlow", sans-serif;
+	scroll-behavior: smooth;
+}
+
+span{
+	font-size: 20px ;
+}  
