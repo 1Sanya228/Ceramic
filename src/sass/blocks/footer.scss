@@ -1,0 +1,162 @@
+@use "/src/sass/base/variables.scss" as v;
+
+.footer {
+	padding: 50px 0;
+	background-color: v.$dark;
+
+	.just-validate-error-field{
+		border-bottom: 1px solid v.$ui-error;
+		outline: transparent;
+		&::placeholder{
+			color: v.$ui-error;
+		}
+	}
+	&_spaced {
+		margin-top: 60px;
+		
+	}
+
+	&__text{
+			color: v.$light;
+			font-size: 16px;
+			margin-top: 40px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: normal;
+	}
+	&__form{
+		margin-top: 40px;
+	}
+	&__input{
+		display: block;
+		height: 32px;
+		width: 293px;
+		box-shadow: none;
+		border: none;
+		color: v.$light;
+		background: transparent;
+		padding-bottom: 15px;
+		border-bottom: 1px solid v.$ui-active;
+		line-height: 28px;
+		font-size: 14px;
+		font-weight: 400;
+		&::placeholder{
+			font-size: 14px;
+			font-weight: 400;
+			font-style: normal;
+			line-height: normal;
+			color: v.$ui-active;
+		}
+	}
+		&__check-block {
+			display: flex;
+			align-items: center;
+			margin-top: 20px;
+			color: v.$light;
+			font-size: 14px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 28px;
+	
+			a {
+				margin-left: 5px;
+				text-decoration: none;
+				color: #a22dc6;
+			}
+		}
+		&__checkbox {
+			margin-right: 15px;
+		}
+		&__btn{
+		margin-top: 20px;
+	}
+
+		&__links{
+			margin-top: 40px;
+			display: flex;
+			flex-wrap: wrap;
+			row-gap: 66px;
+			column-gap: 40px;
+		}
+		&__nav{
+			margin-top: 40px;
+			ul{
+				display: flex;
+				flex-direction: column;
+				row-gap: 20px;
+				list-style-type: none;
+				padding: 0;
+			}
+		}
+		&__link{
+			a{
+			color: v.$light;
+			text-decoration: none;
+			font-size: 16px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: normal;
+			}
+		}
+
+		&__social{
+			margin-top: 40px;
+		}
+		&__social-block{
+			display: flex;
+			margin-top: 40px;
+			column-gap: 10px;
+			a{
+				font-size: 24px;
+				text-decoration: none;
+				color: v.$light;
+			}
+		}
+		&__copy{
+			margin-top: 40px;
+			color: v.$light;
+			text-align: center;
+			font-size: 14px;
+			font-weight: 400;
+			font-style: normal;
+			line-height: normal;
+		}
+}
+@media screen and (min-width:768px) {
+	.footer{
+		&__wrapper{
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+		}
+		&__newletter{
+			width: 100%;
+		}
+	}
+}
+@media screen and (min-width:1200px) {
+.footer{
+	
+	&__newletter{
+		width: auto;
+	}
+	&__social,
+	&__links{
+		margin: 0;
+	}
+	&__copy{
+		margin-top: 50px;
+	}
+}
+}
+@media screen and (min-width:1920px) {
+	.footer{
+		padding-top: 80px;
+		&__spaced{
+			margin-top: 100px;
+		}
+		&__copy{
+			margin-top: 18px;
+		}
+	}
+}

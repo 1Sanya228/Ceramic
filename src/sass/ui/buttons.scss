@@ -1,0 +1,91 @@
+@use "/src/sass/base/mixins.scss" as *;
+@use "/src/sass/base/variables.scss" as v;
+.btn-default{
+	@include button;
+	width: 230px;
+	height: 50px;
+	transition: all 0.4s linear;
+}
+
+.btn-send{
+	@include button;
+		width: 220px;
+		height: 40px;
+		transition: all 0.4s linear;
+		&:focus{
+			outline: 1px solid v.$ceramic ;
+			border: none;
+		}
+		&:disabled{
+			color: v.$ui-disable;
+			border: 1px solid v.$ui-disable;
+		}
+}
+.btn-submit{
+@include button;
+width: 90px;
+height: 40px;
+font-size: 16px;
+border: 1px solid v.$light;
+color: v.$light;
+padding: 0 18px;
+&:disabled{
+	color: v.$ui-disable;
+	border: 1px solid v.$ui-disable;
+}
+}
+
+.btn-read{
+	@include button;
+	width: 145px;
+	height: 32px;
+	font-size: 14px;
+	&:focus {
+			outline: 1px solid v.$ceramic ;
+			border: none;
+		}
+}
+
+
+
+@media screen and (min-width:1200px){
+.btn-default{
+	&:hover{
+		background-color: v.$dark;
+		color: v.$light;
+	}
+	&:active{
+		background-color: v.$ui-active;
+		color: v.$dark;
+		box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.4) inset;
+		border: none;
+	}
+}
+.btn-send {
+	&:active {
+		outline: 1px solid v.$ceramic ;
+		border: none;
+	}
+	&:hover{
+		color: v.$ceramic;
+		border: 1px solid v.$ceramic;
+	}
+}
+.btn-read{
+		&:active {
+				outline: 1px solid v.$ceramic ;
+				border: none;
+			}
+		
+			&:hover {
+				color: v.$ceramic;
+				border: 1px solid v.$ceramic;
+			}
+}
+}
+@media screen and (min-width:1920px) {
+	.btn-default{
+		width: 330px;
+		height: 60px;
+	}
+}

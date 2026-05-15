@@ -1,0 +1,47 @@
+@use "/src/sass/base/variables.scss" as v;
+
+
+
+
+@mixin title{
+	color: v.$dark;
+	font-weight: 400;
+	line-height: normal;
+	font-style: normal;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+@mixin button{
+	display: block;
+	padding: 0 10px;
+	border-radius: 2px;
+	border: 1px solid v.$dark;
+	text-align: center;
+	color: v.$dark;
+	font-weight: 400;
+	font-size: 20px;
+	line-height: normal;
+	text-transform: uppercase;
+	background-color: transparent;
+	cursor: pointer;
+}
+
+@mixin line-decoration{
+	&::after,
+	&::before{
+		content: "";
+		position: absolute;
+		top:0;
+		left: 0;
+		background: v.$dark;
+	}
+	&::after{
+		width: 200px;
+		height: 1px;
+	}
+	&::before{
+		width: 1px;
+		height: 200px;
+	}
+}

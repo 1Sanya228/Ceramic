@@ -1,0 +1,143 @@
+@use "/src/sass/base/variables.scss" as v;
+.header{
+	&__top{
+		display: flex;
+		justify-content: space-between;
+	}
+	&__logo{
+		width: 100px;
+		height: 100px;
+		animation: logoUps 4s;
+	}
+	&__icons{
+		display: flex;
+		align-items: flex-start;
+		gap: 15px;
+		font-size: 18px;
+		a{
+			display: block;
+			color: v.$dark;
+			span{
+			display: block;
+			width: 20px;
+			height: 20px;
+		}
+	}
+	}
+	&__nav{
+		display: none;
+	}
+	&__menu{
+		padding: 50px 10px;
+		position: fixed;
+		background-color: v.$light;
+		top: 0;
+		left: -100vw;
+		width: 100vw;
+		height: 100vh;
+		z-index: 100;
+		transition: transform 0.8s;
+		&_active{
+			transform: translateX(100%);
+		}
+		&-close{
+			width: 20px;
+			height: 20px;
+			span{
+				display: block;
+				width: 20px;
+				height: 1px;
+				background-color: v.$dark;
+				cursor: pointer;
+				transition: all 1.1s;
+				&:nth-child(1){
+					transform: translateY(8px) rotate(47deg);
+				}
+				&:nth-child(2){
+					transform: translateY(8px) rotate(-45deg);
+				}
+			}
+		}
+	}
+	.header__menu{
+		&-nav{
+			padding-top: 50px;
+			padding-left: 24px;
+			ul{
+				display: flex;
+				flex-direction: column;
+				gap: 25px;
+				list-style-type: none;
+				padding: 0;
+			}
+		}
+		&-link{
+			font-size: 20px;
+			color: v.$dark;
+			font-weight: 400;
+			text-transform: uppercase;
+			text-decoration: none;
+
+		}
+	}
+}
+.burger{
+	display: flex;
+	height: 23px;
+	flex-direction: column;
+	row-gap: 10px;
+	padding-right: 35px;
+	span{
+		display: block;
+		width: 20px;
+		height: 1px;
+		background-color: v.$dark;
+	}
+}
+
+@media screen and (min-width:768px) {
+	.header{
+		&__nav{
+			display: block;
+			margin-top: 20px;
+			ul{
+				display: flex;
+				justify-content: center;
+				gap:30px;
+				padding-left: 0;
+				li{
+					list-style-type: none;
+				}
+			}
+		}
+		&__link{
+			font-size: 20px;
+			color: v.$dark;
+			font-weight: 400;
+			font-style: normal;
+			line-height: normal;
+			text-transform: uppercase;
+			text-decoration: none;
+		}
+		&__menu{
+			display: none;
+		}
+	}
+	.burger{
+		visibility: hidden;
+	}
+}
+@media screen and (min-width:1920px) {
+	.header{
+		&__logo{
+			width: 150px;
+			height: 151px;
+		}
+		&__nav{
+			margin-top: 36px;
+			ul{
+				gap:60px;
+			}
+		}
+	}
+}
